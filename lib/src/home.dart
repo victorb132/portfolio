@@ -10,10 +10,8 @@ class Home extends StatelessWidget {
     return const Scaffold(
       body: Center(
         child: ContainerMobile(
-          body: SingleChildScrollView(
-            child: Column(
-              children: [],
-            ),
+          body: Column(
+            children: [],
           ),
         ),
       ),
