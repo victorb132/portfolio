@@ -18,7 +18,7 @@ class ContainerMobile extends StatelessWidget {
       height: height,
       decoration: BoxDecoration(
         border: Border.all(
-          color: Colors.black,
+          color: const Color(0xFFF4DFC8),
           width: 10,
         ),
         borderRadius: BorderRadius.circular(
@@ -33,35 +33,60 @@ class ContainerMobile extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                const SizedBox(
-                  child: Row(
-                    children: [
-                      Text('9:25'),
-                      SizedBox(width: 3),
-                      Icon(
-                        Icons.gps_fixed_rounded,
-                        size: 10,
-                      ),
-                    ],
+                const Expanded(
+                  child: SizedBox(
+                    child: Row(
+                      children: [
+                        SizedBox(width: 3),
+                        Text(
+                          '9:25',
+                          style: TextStyle(
+                            color: Color(0xFFF4DFC8),
+                          ),
+                        ),
+                        SizedBox(width: 3),
+                        Icon(
+                          Icons.gps_fixed_rounded,
+                          size: 10,
+                          color: Color(0xFFF4DFC8),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Container(
                   width: width * 0.4,
                   height: 27,
                   decoration: const BoxDecoration(
-                    color: Colors.black,
+                    color: Color(0xFFF4DFC8),
                     borderRadius: BorderRadius.all(Radius.elliptical(30, 30)),
                   ),
                 ),
-                const SizedBox(
-                  child: Row(
-                    children: [
-                      Icon(Icons.signal_cellular_4_bar, size: 15),
-                      SizedBox(width: 3),
-                      Icon(Icons.signal_wifi_4_bar, size: 15),
-                      SizedBox(width: 3),
-                      Icon(Icons.battery_full, size: 15),
-                    ],
+                const Expanded(
+                  child: SizedBox(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Icon(
+                          Icons.signal_cellular_4_bar,
+                          size: 15,
+                          color: Color(0xFFF4DFC8),
+                        ),
+                        SizedBox(width: 3),
+                        Icon(
+                          Icons.signal_wifi_4_bar,
+                          size: 15,
+                          color: Color(0xFFF4DFC8),
+                        ),
+                        SizedBox(width: 3),
+                        Icon(
+                          Icons.battery_full,
+                          size: 15,
+                          color: Color(0xFFF4DFC8),
+                        ),
+                        SizedBox(width: 3),
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -74,7 +99,7 @@ class ContainerMobile extends StatelessWidget {
               width: width * 0.4,
               height: 5,
               decoration: const BoxDecoration(
-                color: Colors.black,
+                color: Color(0xFFF4DFC8),
                 borderRadius: BorderRadius.all(Radius.elliptical(30, 30)),
               ),
             ),
