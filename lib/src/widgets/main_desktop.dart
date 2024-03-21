@@ -27,7 +27,7 @@ class MainDesktop extends StatelessWidget {
             children: [
               // intro message
               const Text(
-                "Hi,\nI'm Shohruh AK\nA Flutter Developer",
+                "Hi,\nI'm Victor Novais Flutter Developer",
                 style: TextStyle(
                   fontSize: 30,
                   height: 1.5,
