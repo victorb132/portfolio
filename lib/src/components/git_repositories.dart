@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_victor/src/util/read_json.dart';
+import 'package:portfolio_victor/src/utils/read_json.dart';
 
 import 'git_repositories_item.dart';
 
