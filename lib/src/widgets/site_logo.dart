@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constants/colors.dart';
+// import '../constants/colors.dart';
 
 class SiteLogo extends StatelessWidget {
   const SiteLogo({
@@ -12,14 +12,8 @@ class SiteLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: const Text(
-        "AK",
-        style: TextStyle(
-          fontSize: 22,
-          fontWeight: FontWeight.bold,
-          decoration: TextDecoration.underline,
-          color: CustomColor.yellowSecondary,
-        ),
+      child: const Image(
+        image: AssetImage('assets/images/logo.jpg'),
       ),
     );
   }
