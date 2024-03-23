@@ -47,8 +47,6 @@ class _HomeState extends State<Home> {
           scrollDirection: Axis.vertical,
           child: Column(
             children: [
-              SizedBox(key: navbarKeys.first),
-
               // MAIN
               if (constraints.maxWidth >= kMinDesktopWidth)
                 HeaderDesktop(onNavMenuTap: (int navIndex) {
@@ -61,7 +59,7 @@ class _HomeState extends State<Home> {
                     scaffoldKey.currentState?.openEndDrawer();
                   },
                 ),
-
+              SizedBox(key: navbarKeys.first),
               if (constraints.maxWidth >= kMinDesktopWidth)
                 const MainDesktop()
               else

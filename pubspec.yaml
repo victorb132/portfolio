@@ -31,3 +31,12 @@ flutter:
     # Add assets from the images directory to the application.
     - assets/images/
     - assets/repositories.json
+
+  fonts:
+    - family: Sora
+      fonts:
+        - asset: assets/fonts/Sora-Regular.ttf
+        - asset: assets/fonts/Sora-Bold.ttf
+        - asset: assets/fonts/Sora-Light.ttf
+        - asset: assets/fonts/Sora-Thin.ttf
+        - asset: assets/fonts/Sora-Medium.ttf

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_victor/src/widgets/site_logo.dart';
 
 import '../constants/colors.dart';
+import '../constants/typography.dart';
 import '../constants/nav_items.dart';
 import '../styles/style.dart';
 
@@ -15,13 +16,13 @@ class HeaderDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60.0,
+      height: 140.0,
       margin: const EdgeInsets.symmetric(
-        vertical: 10.0,
-        horizontal: 20.0,
+        vertical: 24.0,
+        horizontal: 80.0,
       ),
       width: double.maxFinite,
-      decoration: kHederDecoration,
+      decoration: kHeaderDecoration,
       child: Row(
         children: [
           SiteLogo(
@@ -37,11 +38,8 @@ class HeaderDesktop extends StatelessWidget {
                 },
                 child: Text(
                   navTitles[i],
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: CustomColor.whitePrimary,
-                  ),
+                  style: PTypography.displayTextM
+                      .copyWith(color: PrimaryColor.black),
                 ),
               ),
             ),

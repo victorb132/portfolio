@@ -13,7 +13,8 @@ class SiteLogo extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: const Image(
-        image: AssetImage('assets/images/logo.jpg'),
+        image: AssetImage('assets/images/logo.png'),
+        height: 240.0,
       ),
     );
   }
