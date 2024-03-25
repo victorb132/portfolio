@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 List<String> navTitles = [
-  "Home",
-  "Skills",
-  "Projects",
-  "Contact",
+  "Inicio",
+  "Habilidades",
+  "Projetos",
+  "Contato",
 ];
 
 List<IconData> navIcons = [

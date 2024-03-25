@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_victor/src/constants/colors.dart';
-import 'package:portfolio_victor/src/models/resume_button_models.dart';
+import 'package:portfolio_victor/src/constants/typography.dart';
+import 'package:portfolio_victor/src/models/button_models.dart';
 
 class ResumeButton extends StatelessWidget {
   final String? text;
@@ -63,12 +64,10 @@ class ResumeButton extends StatelessWidget {
     if (text != null) {
       children.add(Text(
         text!,
-        // style: (size == ResumeButtonSize.medium
-        //         ? XelaTextStyle.XelaButtonMedium
-        //         : size == XelaButtonSize.SMALL
-        //             ? XelaTextStyle.XelaButtonSmall
-        //             : XelaTextStyle.XelaButtonLarge)
-        //     .apply(color: foregroundColor),
+        style: PTypography.buttonText.copyWith(
+          color: PrimaryColor.white,
+          fontWeight: FontWeight.w600,
+        ),
       ));
     }
 
@@ -114,19 +113,19 @@ class ResumeButton extends StatelessWidget {
                 ? 0
                 : (leftIcon != null
                     ? size == ResumeButtonSize.medium
-                        ? 16
+                        ? 18
                         : 8
                     : (size == ResumeButtonSize.medium
-                        ? 24
+                        ? 18
                         : (size == ResumeButtonSize.small && text == null
                             ? 8
                             : 16))),
-            removePaddings ? 0 : (size == ResumeButtonSize.small ? 8 : 16),
+            removePaddings ? 0 : (size == ResumeButtonSize.small ? 8 : 12),
             removePaddings
                 ? 0
                 : (rightIcon != null
                     ? (size == ResumeButtonSize.medium
-                        ? 24
+                        ? 18
                         : size == ResumeButtonSize.medium
                             ? 16
                             : 8)
@@ -135,7 +134,7 @@ class ResumeButton extends StatelessWidget {
                         : (size == ResumeButtonSize.small && text == null
                             ? 8
                             : 16))),
-            removePaddings ? 0 : (size == ResumeButtonSize.small ? 8 : 16)),
+            removePaddings ? 0 : (size == ResumeButtonSize.small ? 8 : 12)),
         child: Row(
           mainAxisSize: autoResize ? MainAxisSize.min : MainAxisSize.max,
           mainAxisAlignment: horizontalAlignment,

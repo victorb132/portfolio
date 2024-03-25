@@ -4,14 +4,12 @@ class PTypography {
   static const TextStyle displayText = TextStyle(
     fontSize: 48,
     fontFamily: 'Sora-Regular',
-    letterSpacing: -2,
-    height: 56,
   );
 
   static const TextStyle displayTextM = TextStyle(
     fontSize: 24,
     fontFamily: 'Sora-Regular',
-    letterSpacing: -2,
+    // letterSpacing: -1,
     height: 2,
   );
 
@@ -26,7 +24,7 @@ class PTypography {
     fontSize: 36,
     fontFamily: 'Sora-Regular',
     letterSpacing: -2,
-    height: 48,
+    height: 4,
   );
 
   static const TextStyle headingH2 = TextStyle(
@@ -74,8 +72,6 @@ class PTypography {
   static const TextStyle paragraphP2 = TextStyle(
     fontSize: 16,
     fontFamily: 'Sora-Regular',
-    letterSpacing: -2,
-    height: 20,
   );
 
   static const TextStyle paragraphP3 = TextStyle(
@@ -87,16 +83,16 @@ class PTypography {
 
   static const TextStyle buttonText = TextStyle(
     fontSize: 20,
-    fontFamily: 'Sora-Regular',
-    letterSpacing: -2,
-    height: 24,
+    fontFamily: 'Sora-SemiBold',
+    letterSpacing: 1,
+    // height: 24,
   );
 
   static const TextStyle buttonText2 = TextStyle(
     fontSize: 16,
     fontFamily: 'Sora-Regular',
-    letterSpacing: -2,
-    height: 20,
+    letterSpacing: 1,
+    // height: 20,
   );
 
   static const TextStyle undefined = TextStyle(
