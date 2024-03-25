@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_victor/src/constants/colors.dart';
 import 'package:portfolio_victor/src/constants/sns_links.dart';
 import 'package:portfolio_victor/src/constants/typography.dart';
-import 'package:portfolio_victor/src/widgets/contact_section.dart';
+// import 'package:portfolio_victor/src/widgets/contact_section.dart';
 import 'package:portfolio_victor/src/widgets/main_desktop.dart';
 import 'package:portfolio_victor/src/widgets/main_mobile.dart';
-import 'package:portfolio_victor/src/widgets/projects_section.dart';
+// import 'package:portfolio_victor/src/widgets/projects_section.dart';
 import 'package:portfolio_victor/src/widgets/skills_desktop.dart';
 import 'package:portfolio_victor/src/widgets/skills_mobile.dart';
 import 'dart:js' as js;
@@ -30,8 +30,8 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery.of(context).size;
-    final screenWidth = screenSize.width;
+    // final screenSize = MediaQuery.of(context).size;
+    // final screenWidth = screenSize.width;
 
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
