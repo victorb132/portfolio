@@ -150,11 +150,9 @@ class MainDesktop extends StatelessWidget {
           ),
           // avatar img
           Expanded(
-            child: Positioned(
-              child: Image.asset(
-                "assets/images/banner_home.png",
-                width: screenWidth / 2,
-              ),
+            child: Image.asset(
+              "assets/images/banner_home.png",
+              width: screenWidth / 2,
             ),
           )
         ],

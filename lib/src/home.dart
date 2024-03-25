@@ -66,46 +66,46 @@ class _HomeState extends State<Home> {
                 const MainMobile(),
 
               // SKILLS
-              Container(
-                key: navbarKeys[1],
-                width: screenWidth,
-                padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
-                color: CustomColor.bgLight1,
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    // title
-                    const Text(
-                      "What I can do",
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                        color: CustomColor.whitePrimary,
-                      ),
-                    ),
-                    const SizedBox(height: 50),
+              // Container(
+              //   key: navbarKeys[1],
+              //   width: screenWidth,
+              //   padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
+              //   color: CustomColor.bgLight1,
+              //   child: Column(
+              //     mainAxisSize: MainAxisSize.min,
+              //     children: [
+              //       // title
+              //       const Text(
+              //         "What I can do",
+              //         style: TextStyle(
+              //           fontSize: 24,
+              //           fontWeight: FontWeight.bold,
+              //           color: CustomColor.whitePrimary,
+              //         ),
+              //       ),
+              //       const SizedBox(height: 50),
 
-                    // platforms and skills
-                    if (constraints.maxWidth >= kMedDesktopWidth)
-                      const SkillsDesktop()
-                    else
-                      const SkillsMobile(),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 30),
+              //       // platforms and skills
+              //       // if (constraints.maxWidth >= kMedDesktopWidth)
+              //       //   const SkillsDesktop()
+              //       // else
+              //       //   const SkillsMobile(),
+              //     ],
+              //   ),
+              // ),
+              // const SizedBox(height: 30),
 
               // PROJECTS
-              ProjectsSection(
-                key: navbarKeys[2],
-              ),
+              // ProjectsSection(
+              //   key: navbarKeys[2],
+              // ),
 
-              const SizedBox(height: 30),
+              // const SizedBox(height: 30),
 
               // CONTACT
-              ContactSection(
-                key: navbarKeys[3],
-              ),
+              // ContactSection(
+              //   key: navbarKeys[3],
+              // ),
               const SizedBox(height: 30),
 
               // FOOTER

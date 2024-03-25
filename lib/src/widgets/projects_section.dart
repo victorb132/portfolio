@@ -26,19 +26,19 @@ class ProjectsSection extends StatelessWidget {
           ),
           const SizedBox(height: 50),
           // Work projects cards
-          ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 900),
-            child: Wrap(
-              spacing: 25,
-              runSpacing: 25,
-              children: [
-                for (int i = 0; i < workProjectUtils.length; i++)
-                  ProjectCardWidget(
-                    project: workProjectUtils[i],
-                  ),
-              ],
-            ),
-          ),
+          // ConstrainedBox(
+          //   constraints: const BoxConstraints(maxWidth: 900),
+          //   child: Wrap(
+          //     spacing: 25,
+          //     runSpacing: 25,
+          //     children: [
+          //       for (int i = 0; i < workProjectUtils.length; i++)
+          //         ProjectCardWidget(
+          //           project: workProjectUtils[i],
+          //         ),
+          //     ],
+          //   ),
+          // ),
           const SizedBox(height: 80),
           // Hobby projects title
           const Text(

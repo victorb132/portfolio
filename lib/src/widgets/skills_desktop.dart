@@ -46,29 +46,29 @@ class SkillsDesktop extends StatelessWidget {
         const SizedBox(width: 50),
 
         // skills
-        Flexible(
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(
-              maxWidth: 500,
-            ),
-            child: Wrap(
-              spacing: 10.0,
-              runSpacing: 10.0,
-              children: [
-                for (int i = 0; i < skillItems.length; i++)
-                  Chip(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 12.0,
-                      horizontal: 16.0,
-                    ),
-                    backgroundColor: CustomColor.bgLight2,
-                    label: Text(skillItems[i]["title"]),
-                    avatar: Image.asset(skillItems[i]["img"]),
-                  ),
-              ],
-            ),
-          ),
-        )
+        // Flexible(
+        //   child: ConstrainedBox(
+        //     constraints: const BoxConstraints(
+        //       maxWidth: 500,
+        //     ),
+        //     child: Wrap(
+        //       spacing: 10.0,
+        //       runSpacing: 10.0,
+        //       children: [
+        //         for (int i = 0; i < skillItems.length; i++)
+        //           Chip(
+        //             padding: const EdgeInsets.symmetric(
+        //               vertical: 12.0,
+        //               horizontal: 16.0,
+        //             ),
+        //             backgroundColor: CustomColor.bgLight2,
+        //             label: Text(skillItems[i]["title"]),
+        //             avatar: Image.asset(skillItems[i]["img"]),
+        //           ),
+        //       ],
+        //     ),
+        //   ),
+        // )
       ],
     );
   }
