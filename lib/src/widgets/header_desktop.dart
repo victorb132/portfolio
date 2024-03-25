@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_victor/src/components/resume_button.dart';
+import 'package:portfolio_victor/src/models/resume_button_models.dart';
 import 'package:portfolio_victor/src/widgets/site_logo.dart';
 
 import '../constants/colors.dart';
@@ -49,9 +50,17 @@ class HeaderDesktop extends StatelessWidget {
                 ),
             ],
           ),
-          SizedBox(
-            width: 153.0,
-            child: ResumeButton(),
+          ResumeButton(
+            onPressed: () {},
+            text: "Resume",
+            type: ResumeButtonType.primary,
+            size: ResumeButtonSize.medium,
+            foregroundColor: Colors.white,
+            rightIcon: const Icon(
+              Icons.download,
+              color: Colors.white,
+              size: 20,
+            ),
           )
         ],
       ),
