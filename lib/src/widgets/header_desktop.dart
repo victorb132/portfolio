@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_victor/src/components/resume_button.dart';
 import 'package:portfolio_victor/src/widgets/site_logo.dart';
 
 import '../constants/colors.dart';
@@ -24,25 +25,34 @@ class HeaderDesktop extends StatelessWidget {
       width: double.maxFinite,
       decoration: kHeaderDecoration,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SiteLogo(
             onTap: () {},
           ),
-          const Spacer(),
-          for (int i = 0; i < navTitles.length; i++)
-            Padding(
-              padding: const EdgeInsets.only(right: 20),
-              child: TextButton(
-                onPressed: () {
-                  onNavMenuTap(i);
-                },
-                child: Text(
-                  navTitles[i],
-                  style: PTypography.displayTextM
-                      .copyWith(color: PrimaryColor.black),
+          Row(
+            children: [
+              for (int i = 0; i < navTitles.length; i++)
+                Padding(
+                  padding: const EdgeInsets.only(right: 20),
+                  child: TextButton(
+                    onPressed: () {
+                      onNavMenuTap(i);
+                    },
+                    child: Text(
+                      navTitles[i],
+                      style: PTypography.displayTextM
+                          .copyWith(color: PrimaryColor.black),
+                    ),
+                  ),
                 ),
-              ),
-            ),
+            ],
+          ),
+          SizedBox(
+            width: 153.0,
+            child: ResumeButton(),
+          )
         ],
       ),
     );
