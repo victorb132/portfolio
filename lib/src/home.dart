@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_victor/src/constants/colors.dart';
 import 'package:portfolio_victor/src/constants/sns_links.dart';
+import 'package:portfolio_victor/src/constants/typography.dart';
 import 'package:portfolio_victor/src/widgets/contact_section.dart';
 import 'package:portfolio_victor/src/widgets/main_desktop.dart';
 import 'package:portfolio_victor/src/widgets/main_mobile.dart';
@@ -66,33 +67,54 @@ class _HomeState extends State<Home> {
                 const MainMobile(),
 
               // SKILLS
-              // Container(
-              //   key: navbarKeys[1],
-              //   width: screenWidth,
-              //   padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
-              //   color: CustomColor.bgLight1,
-              //   child: Column(
-              //     mainAxisSize: MainAxisSize.min,
-              //     children: [
-              //       // title
-              //       const Text(
-              //         "What I can do",
-              //         style: TextStyle(
-              //           fontSize: 24,
-              //           fontWeight: FontWeight.bold,
-              //           color: CustomColor.whitePrimary,
-              //         ),
-              //       ),
-              //       const SizedBox(height: 50),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 80.0,
+                  right: 80.0,
+                  top: 60.0,
+                ),
+                child: Container(
+                  key: navbarKeys[1],
+                  color: CustomColor.bgLight1,
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                      left: 80.0,
+                      right: 80.0,
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        // title
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "My",
+                              style: PTypography.displayText.copyWith(
+                                color: PrimaryColor.black,
+                              ),
+                            ),
+                            const SizedBox(width: 10),
+                            Text(
+                              "Skills",
+                              style: PTypography.displayText.copyWith(
+                                  color: PrimaryColor.black,
+                                  fontWeight: FontWeight.w900),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 50),
 
-              //       // platforms and skills
-              //       // if (constraints.maxWidth >= kMedDesktopWidth)
-              //       //   const SkillsDesktop()
-              //       // else
-              //       //   const SkillsMobile(),
-              //     ],
-              //   ),
-              // ),
+                        // platforms and skills
+                        if (constraints.maxWidth >= kMedDesktopWidth)
+                          const SkillsDesktop()
+                        else
+                          const SkillsMobile(),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
               // const SizedBox(height: 30),
 
               // PROJECTS

@@ -1,19 +1,35 @@
 const List<Map> platformItems = [
   {
-    "img": "assets/android_icon.png",
-    "title": "Android Dev",
+    "img": "assets/images/skills/icon-javscript.png",
+    "title": "Javascript",
   },
   {
-    "img": "assets/web_icon.png",
-    "title": "Web Dev",
+    "img": "assets/images/skills/icon-git.png",
+    "title": "Git",
   },
   {
-    "img": "assets/ios_icon.png",
-    "title": "IOS Dev",
+    "img": "assets/images/skills/icon-nodejs.png",
+    "title": "Node JS",
   },
   {
-    "img": "assets/desktop_icon.png",
-    "title": "Desktop Dev",
+    "img": "assets/images/skills/icon-react.png",
+    "title": "React.JS",
+  },
+  {
+    "img": "assets/images/skills/icon-typescript.png",
+    "title": "TypeScript",
+  },
+  {
+    "img": "assets/images/skills/icon-sass.png",
+    "title": "SaSs",
+  },
+  {
+    "img": "assets/images/skills/icon-typescript.png",
+    "title": "TypeScript",
+  },
+  {
+    "img": "assets/images/skills/icon-sass.png",
+    "title": "SaSs",
   }
 ];
 

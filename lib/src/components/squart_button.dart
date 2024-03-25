@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_victor/src/constants/typography.dart';
 import 'package:portfolio_victor/src/models/button_models.dart';
 
 class SquartButton extends StatelessWidget {
@@ -40,6 +41,18 @@ class SquartButton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             icon,
+            text != null
+                ? Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Text(
+                      text!,
+                      style: PTypography.headingH5.copyWith(
+                        color: foregroundColor,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  )
+                : Container(),
           ],
         ),
       ),

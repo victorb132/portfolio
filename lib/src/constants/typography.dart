@@ -51,8 +51,6 @@ class PTypography {
   static const TextStyle headingH5 = TextStyle(
     fontSize: 20,
     fontFamily: 'Sora-Regular',
-    letterSpacing: -2,
-    height: 24,
   );
 
   static const TextStyle headingH6 = TextStyle(
