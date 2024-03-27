@@ -1,9 +1,5 @@
 const List<Map> platformItems = [
   {
-    "img": "assets/images/skills/icon-javscript.png",
-    "title": "Javascript",
-  },
-  {
     "img": "assets/images/skills/icon-git.png",
     "title": "Git",
   },
@@ -16,21 +12,9 @@ const List<Map> platformItems = [
     "title": "React.JS",
   },
   {
-    "img": "assets/images/skills/icon-typescript.png",
-    "title": "TypeScript",
-  },
-  {
     "img": "assets/images/skills/icon-sass.png",
     "title": "SaSs",
   },
-  {
-    "img": "assets/images/skills/icon-typescript.png",
-    "title": "TypeScript",
-  },
-  {
-    "img": "assets/images/skills/icon-sass.png",
-    "title": "SaSs",
-  }
 ];
 
 const List<Map> skillItems = [

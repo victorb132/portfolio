@@ -5,6 +5,7 @@ import 'package:portfolio_victor/src/constants/typography.dart';
 // import 'package:portfolio_victor/src/widgets/contact_section.dart';
 import 'package:portfolio_victor/src/widgets/main_desktop.dart';
 import 'package:portfolio_victor/src/widgets/main_mobile.dart';
+import 'package:portfolio_victor/src/widgets/projects_section.dart';
 // import 'package:portfolio_victor/src/widgets/projects_section.dart';
 import 'package:portfolio_victor/src/widgets/skills_desktop.dart';
 import 'package:portfolio_victor/src/widgets/skills_mobile.dart';
@@ -118,9 +119,9 @@ class _HomeState extends State<Home> {
               // const SizedBox(height: 30),
 
               // PROJECTS
-              // ProjectsSection(
-              //   key: navbarKeys[2],
-              // ),
+              ProjectsSection(
+                key: navbarKeys[2],
+              ),
 
               // const SizedBox(height: 30),
 

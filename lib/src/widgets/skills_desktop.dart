@@ -32,18 +32,13 @@ class SkillsDesktop extends StatelessWidget {
                   background: PrimaryColor.white,
                   foregroundColor: PrimaryColor.black,
                   borderColor: PrimaryColor.black,
-                  icon: Image.asset(
-                    platformItems[i]['img'],
-                    width: 56,
-                    height: 56,
-                  ),
+                  icon: platformItems[i]['img'],
                   onPressed: () {},
                   text: platformItems[i]['title'],
                 )
             ],
           ),
         ),
-        // const SizedBox(width: 50),
       ],
     );
   }
