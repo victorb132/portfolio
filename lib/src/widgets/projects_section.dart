@@ -3,7 +3,6 @@ import 'package:portfolio_victor/src/constants/typography.dart';
 
 import '../constants/colors.dart';
 import '../utils/project_utils.dart';
-import 'project_card.dart';
 
 class ProjectsSection extends StatelessWidget {
   const ProjectsSection({super.key});
@@ -15,7 +14,7 @@ class ProjectsSection extends StatelessWidget {
     return Container(
       color: PrimaryColor.black,
       width: screenWidth,
-      padding: const EdgeInsets.fromLTRB(25, 60, 25, 60),
+      padding: const EdgeInsets.fromLTRB(25, 60, 25, 0),
       margin: const EdgeInsets.only(top: 50),
       child: Column(
         children: [

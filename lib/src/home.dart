@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_victor/src/constants/colors.dart';
 import 'package:portfolio_victor/src/constants/sns_links.dart';
 import 'package:portfolio_victor/src/constants/typography.dart';
+import 'package:portfolio_victor/src/widgets/about_me.dart';
+import 'package:portfolio_victor/src/widgets/contact_section.dart';
 // import 'package:portfolio_victor/src/widgets/contact_section.dart';
 import 'package:portfolio_victor/src/widgets/main_desktop.dart';
 import 'package:portfolio_victor/src/widgets/main_mobile.dart';
@@ -116,15 +118,11 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
-              // const SizedBox(height: 30),
-
               // PROJECTS
               ProjectsSection(
                 key: navbarKeys[2],
               ),
-
-              // const SizedBox(height: 30),
-
+              const AboutMe(),
               // CONTACT
               // ContactSection(
               //   key: navbarKeys[3],
