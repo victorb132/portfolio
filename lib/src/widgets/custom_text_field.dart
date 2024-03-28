@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_victor/src/constants/typography.dart';
 
 import '../constants/colors.dart';
 
@@ -17,19 +18,25 @@ class CustomTextField extends StatelessWidget {
     return TextField(
       controller: controller,
       maxLines: maxLines,
-      style: const TextStyle(
-        color: CustomColor.scaffoldBg,
+      style: PTypography.headingH6.copyWith(
+        color: ZincColor.zinc500,
       ),
       decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+          borderSide: const BorderSide(
+            color: Colors.black,
+            width: 2,
+          ),
+        ),
         contentPadding: const EdgeInsets.all(16),
         filled: true,
-        fillColor: CustomColor.whiteSecondary,
+        fillColor: PrimaryColor.white,
         focusedBorder: getInputBorder,
         enabledBorder: getInputBorder,
-        border: getInputBorder,
         hintText: hintText,
-        hintStyle: const TextStyle(
-          color: CustomColor.hintDark,
+        hintStyle: PTypography.headingH6.copyWith(
+          color: ZincColor.zinc500,
         ),
       ),
     );

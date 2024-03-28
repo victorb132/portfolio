@@ -4,11 +4,10 @@ import 'package:portfolio_victor/src/constants/sns_links.dart';
 import 'package:portfolio_victor/src/constants/typography.dart';
 import 'package:portfolio_victor/src/widgets/about_me.dart';
 import 'package:portfolio_victor/src/widgets/contact_section.dart';
-// import 'package:portfolio_victor/src/widgets/contact_section.dart';
 import 'package:portfolio_victor/src/widgets/main_desktop.dart';
 import 'package:portfolio_victor/src/widgets/main_mobile.dart';
+import 'package:portfolio_victor/src/widgets/mobile_projects.dart';
 import 'package:portfolio_victor/src/widgets/projects_section.dart';
-// import 'package:portfolio_victor/src/widgets/projects_section.dart';
 import 'package:portfolio_victor/src/widgets/skills_desktop.dart';
 import 'package:portfolio_victor/src/widgets/skills_mobile.dart';
 import 'dart:js' as js;
@@ -123,10 +122,11 @@ class _HomeState extends State<Home> {
                 key: navbarKeys[2],
               ),
               const AboutMe(),
+              const MobileProjects(),
               // CONTACT
-              // ContactSection(
-              //   key: navbarKeys[3],
-              // ),
+              ContactSection(
+                key: navbarKeys[3],
+              ),
               const SizedBox(height: 30),
 
               // FOOTER

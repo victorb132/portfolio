@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_victor/src/constants/colors.dart';
 
 class ContainerMobile extends StatelessWidget {
   final Widget body;
@@ -18,7 +19,7 @@ class ContainerMobile extends StatelessWidget {
       height: height,
       decoration: BoxDecoration(
         border: Border.all(
-          color: const Color(0xFFF4DFC8),
+          color: PrimaryColor.white,
           width: 10,
         ),
         borderRadius: BorderRadius.circular(
@@ -41,14 +42,14 @@ class ContainerMobile extends StatelessWidget {
                         Text(
                           '9:25',
                           style: TextStyle(
-                            color: Color(0xFFF4DFC8),
+                            color: PrimaryColor.white,
                           ),
                         ),
                         SizedBox(width: 3),
                         Icon(
                           Icons.gps_fixed_rounded,
                           size: 10,
-                          color: Color(0xFFF4DFC8),
+                          color: PrimaryColor.white,
                         ),
                       ],
                     ),
@@ -58,7 +59,7 @@ class ContainerMobile extends StatelessWidget {
                   width: width * 0.4,
                   height: 27,
                   decoration: const BoxDecoration(
-                    color: Color(0xFFF4DFC8),
+                    color: PrimaryColor.white,
                     borderRadius: BorderRadius.all(Radius.elliptical(30, 30)),
                   ),
                 ),
@@ -70,19 +71,19 @@ class ContainerMobile extends StatelessWidget {
                         Icon(
                           Icons.signal_cellular_4_bar,
                           size: 15,
-                          color: Color(0xFFF4DFC8),
+                          color: PrimaryColor.white,
                         ),
                         SizedBox(width: 3),
                         Icon(
                           Icons.signal_wifi_4_bar,
                           size: 15,
-                          color: Color(0xFFF4DFC8),
+                          color: PrimaryColor.white,
                         ),
                         SizedBox(width: 3),
                         Icon(
                           Icons.battery_full,
                           size: 15,
-                          color: Color(0xFFF4DFC8),
+                          color: PrimaryColor.white,
                         ),
                         SizedBox(width: 3),
                       ],
@@ -99,7 +100,7 @@ class ContainerMobile extends StatelessWidget {
               width: width * 0.4,
               height: 5,
               decoration: const BoxDecoration(
-                color: Color(0xFFF4DFC8),
+                color: PrimaryColor.white,
                 borderRadius: BorderRadius.all(Radius.elliptical(30, 30)),
               ),
             ),

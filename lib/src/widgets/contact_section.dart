@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_victor/src/constants/size.dart';
 import 'package:portfolio_victor/src/constants/sns_links.dart';
+import 'package:portfolio_victor/src/constants/typography.dart';
 
 import '../constants/colors.dart';
-import 'custom_text_field.dart';
 import 'dart:js' as js;
 
 class ContactSection extends StatelessWidget {
@@ -12,49 +11,12 @@ class ContactSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
+      padding: const EdgeInsets.fromLTRB(25, 60, 25, 60),
       color: CustomColor.bgLight1,
       child: Column(
         children: [
-          // title
-          const Text(
-            "Get in touch",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 24,
-              color: CustomColor.whitePrimary,
-            ),
-          ),
-
-          const SizedBox(height: 50),
-          ConstrainedBox(
-            constraints: const BoxConstraints(
-              maxWidth: 700,
-              maxHeight: 100,
-            ),
-            child: LayoutBuilder(
-              builder: (context, constraints) {
-                if (constraints.maxWidth >= kMinDesktopWidth) {
-                  return buildNameEmailFieldDesktop();
-                }
-
-                // else
-                return buildNameEmailFieldMobile();
-              },
-            ),
-          ),
+          buildNameEmailFieldMobile(),
           const SizedBox(height: 15),
-          // message
-          ConstrainedBox(
-            constraints: const BoxConstraints(
-              maxWidth: 700,
-            ),
-            child: CustomTextField(
-              hintText: "Your message",
-              maxLines: 16,
-            ),
-          ),
-          const SizedBox(height: 20),
           // send button
           ConstrainedBox(
             constraints: const BoxConstraints(
@@ -136,41 +98,92 @@ class ContactSection extends StatelessWidget {
     );
   }
 
-  Row buildNameEmailFieldDesktop() {
-    return Row(
-      children: [
-        // name
-        Flexible(
-          child: CustomTextField(
-            hintText: "Your name",
-          ),
-        ),
-        const SizedBox(width: 15),
-        // email
-        Flexible(
-          child: CustomTextField(
-            hintText: "Your email",
-          ),
-        ),
-      ],
-    );
-  }
-
   Column buildNameEmailFieldMobile() {
     return Column(
       children: [
         // name
-        Flexible(
-          child: CustomTextField(
-            hintText: "Your name",
-          ),
+        TextField(
+          cursorColor: PrimaryColor.black,
+          decoration: InputDecoration(
+              fillColor: PrimaryColor.black,
+              focusColor: PrimaryColor.black,
+              hoverColor: PrimaryColor.black,
+              enabledBorder: const OutlineInputBorder(
+                borderSide: BorderSide(color: PrimaryColor.black),
+                borderRadius: BorderRadius.all(Radius.circular(0)),
+              ),
+              focusedBorder: const OutlineInputBorder(
+                borderSide: BorderSide(color: PrimaryColor.black),
+                borderRadius: BorderRadius.all(Radius.circular(0)),
+              ),
+              border: const OutlineInputBorder(),
+              // labelText: 'Your name',
+              label: Text(
+                'Your name',
+                style: PTypography.headingH6.copyWith(
+                  color: ZincColor.zinc500,
+                ),
+              )),
         ),
         const SizedBox(height: 15),
         // email
-        Flexible(
-          child: CustomTextField(
-            hintText: "Your email",
+        TextField(
+          decoration: InputDecoration(
+              fillColor: PrimaryColor.black,
+              focusColor: PrimaryColor.black,
+              hoverColor: PrimaryColor.black,
+              enabledBorder: const OutlineInputBorder(
+                borderSide: BorderSide(color: PrimaryColor.black),
+                borderRadius: BorderRadius.all(Radius.circular(0)),
+              ),
+              border: const OutlineInputBorder(),
+              // labelText: 'Your name',
+              label: Text(
+                'Email',
+                style: PTypography.headingH6.copyWith(
+                  color: ZincColor.zinc500,
+                ),
+              )),
+        ),
+        const SizedBox(height: 15),
+        TextField(
+          decoration: InputDecoration(
+              fillColor: PrimaryColor.black,
+              focusColor: PrimaryColor.black,
+              hoverColor: PrimaryColor.black,
+              enabledBorder: const OutlineInputBorder(
+                borderSide: BorderSide(color: PrimaryColor.black),
+                borderRadius: BorderRadius.all(Radius.circular(0)),
+              ),
+              border: const OutlineInputBorder(),
+              // labelText: 'Your name',
+              label: Text(
+                'Your website (If exists)',
+                style: PTypography.headingH6.copyWith(
+                  color: ZincColor.zinc500,
+                ),
+              )),
+        ),
+        const SizedBox(height: 15),
+        TextField(
+          decoration: InputDecoration(
+            fillColor: PrimaryColor.black,
+            focusColor: PrimaryColor.black,
+            hoverColor: PrimaryColor.black,
+            enabledBorder: const OutlineInputBorder(
+              borderSide: BorderSide(color: PrimaryColor.black),
+              borderRadius: BorderRadius.all(Radius.circular(0)),
+            ),
+            border: const OutlineInputBorder(),
+            // labelText: 'Your name',
+            label: Text(
+              'How can I help?*',
+              style: PTypography.headingH6.copyWith(
+                color: ZincColor.zinc500,
+              ),
+            ),
           ),
+          maxLines: 6,
         ),
       ],
     );
