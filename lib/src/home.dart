@@ -190,11 +190,9 @@ class _HomeState extends State<Home> {
 
   void scrollToSection(int navIndex) {
     final key = navbarKeys[navIndex];
-    Scrollable.ensureVisible(
-      key.currentContext!,
-      duration: const Duration(milliseconds: 500),
-      curve: Curves.easeInOut,
-      alignment: 0.5,
-    );
+    Scrollable.ensureVisible(key.currentContext!,
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.easeInOut,
+        alignment: 0.5);
   }
 }
