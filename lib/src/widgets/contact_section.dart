@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_victor/src/constants/sns_links.dart';
+// import 'package:portfolio_victor/src/constants/sns_links.dart';
 import 'package:portfolio_victor/src/constants/typography.dart';
 
 import '../constants/colors.dart';
-import 'dart:js' as js;
+// import 'dart:js' as js;
 
 class ContactSection extends StatelessWidget {
-  const ContactSection({super.key});
+  Key? keyContact;
+
+  ContactSection({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: keyContact,
       padding: const EdgeInsets.fromLTRB(25, 60, 25, 60),
       color: CustomColor.bgLight1,
       child: Column(
@@ -41,58 +44,58 @@ class ContactSection extends StatelessWidget {
           const SizedBox(height: 15),
 
           // SNS icon button links
-          Wrap(
-            spacing: 12,
-            runSpacing: 12,
-            alignment: WrapAlignment.center,
-            children: [
-              InkWell(
-                onTap: () {
-                  js.context.callMethod('open', [SnsLinks.github]);
-                },
-                child: Image.asset(
-                  "assets/github.png",
-                  width: 28,
-                ),
-              ),
-              InkWell(
-                onTap: () {
-                  js.context.callMethod('open', [SnsLinks.linkedIn]);
-                },
-                child: Image.asset(
-                  "assets/linkedin.png",
-                  width: 28,
-                ),
-              ),
-              InkWell(
-                onTap: () {
-                  js.context.callMethod('open', [SnsLinks.facebook]);
-                },
-                child: Image.asset(
-                  "assets/facebook.png",
-                  width: 28,
-                ),
-              ),
-              InkWell(
-                onTap: () {
-                  js.context.callMethod('open', [SnsLinks.instagram]);
-                },
-                child: Image.asset(
-                  "assets/instagram.png",
-                  width: 28,
-                ),
-              ),
-              InkWell(
-                onTap: () {
-                  js.context.callMethod('open', [SnsLinks.telegram]);
-                },
-                child: Image.asset(
-                  "assets/telegram.png",
-                  width: 28,
-                ),
-              ),
-            ],
-          )
+          // Wrap(
+          //   spacing: 12,
+          //   runSpacing: 12,
+          //   alignment: WrapAlignment.center,
+          //   children: [
+          //     InkWell(
+          //       onTap: () {
+          //         js.context.callMethod('open', [SnsLinks.github]);
+          //       },
+          //       child: Image.asset(
+          //         "assets/github.png",
+          //         width: 28,
+          //       ),
+          //     ),
+          //     InkWell(
+          //       onTap: () {
+          //         js.context.callMethod('open', [SnsLinks.linkedIn]);
+          //       },
+          //       child: Image.asset(
+          //         "assets/linkedin.png",
+          //         width: 28,
+          //       ),
+          //     ),
+          //     InkWell(
+          //       onTap: () {
+          //         js.context.callMethod('open', [SnsLinks.facebook]);
+          //       },
+          //       child: Image.asset(
+          //         "assets/facebook.png",
+          //         width: 28,
+          //       ),
+          //     ),
+          //     InkWell(
+          //       onTap: () {
+          //         js.context.callMethod('open', [SnsLinks.instagram]);
+          //       },
+          //       child: Image.asset(
+          //         "assets/instagram.png",
+          //         width: 28,
+          //       ),
+          //     ),
+          //     InkWell(
+          //       onTap: () {
+          //         js.context.callMethod('open', [SnsLinks.telegram]);
+          //       },
+          //       child: Image.asset(
+          //         "assets/telegram.png",
+          //         width: 28,
+          //       ),
+          //     ),
+          //   ],
+          // )
         ],
       ),
     );

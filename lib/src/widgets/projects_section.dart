@@ -5,13 +5,16 @@ import '../constants/colors.dart';
 import '../utils/project_utils.dart';
 
 class ProjectsSection extends StatelessWidget {
-  const ProjectsSection({super.key});
+  Key? keyProject;
+
+  ProjectsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
 
     return Container(
+      key: keyProject,
       color: PrimaryColor.black,
       width: screenWidth,
       padding: const EdgeInsets.fromLTRB(25, 60, 25, 0),

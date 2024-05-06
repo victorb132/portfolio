@@ -6,7 +6,9 @@ import 'package:portfolio_victor/src/models/button_models.dart';
 import '../constants/colors.dart';
 
 class MainDesktop extends StatelessWidget {
-  const MainDesktop({super.key});
+  Key? keyDesk;
+
+  MainDesktop({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +16,7 @@ class MainDesktop extends StatelessWidget {
     final screenWidth = screenSize.width;
 
     return Container(
+      key: keyDesk,
       margin: const EdgeInsets.only(
         left: 80.0,
         right: 80.0,

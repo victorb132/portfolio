@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sticky_headers/sticky_headers.dart';
+
 import 'package:portfolio_victor/src/constants/colors.dart';
-import 'package:portfolio_victor/src/constants/sns_links.dart';
 import 'package:portfolio_victor/src/constants/typography.dart';
 import 'package:portfolio_victor/src/widgets/about_me.dart';
 import 'package:portfolio_victor/src/widgets/contact_section.dart';
@@ -10,7 +11,6 @@ import 'package:portfolio_victor/src/widgets/mobile_projects.dart';
 import 'package:portfolio_victor/src/widgets/projects_section.dart';
 import 'package:portfolio_victor/src/widgets/skills_desktop.dart';
 import 'package:portfolio_victor/src/widgets/skills_mobile.dart';
-import 'dart:js' as js;
 import '../src/constants/size.dart';
 
 import '../src/widgets/drawer_mobile.dart';
@@ -51,86 +51,136 @@ class _HomeState extends State<Home> {
           child: Column(
             children: [
               // MAIN
-              if (constraints.maxWidth >= kMinDesktopWidth)
-                HeaderDesktop(onNavMenuTap: (int navIndex) {
-                  scrollToSection(navIndex);
-                })
-              else
+              if (constraints.maxWidth >= kMinDesktopWidth) ...[
+                StickyHeader(
+                  header: HeaderDesktop(
+                    onNavMenuTap: (int navIndex) {
+                      scrollToSection(navIndex);
+                    },
+                  ),
+                  content: Column(
+                    children: [
+                      MainDesktop(
+                        key: navbarKeys[0],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          left: 80.0,
+                          right: 80.0,
+                          top: 60.0,
+                        ),
+                        child: Container(
+                          key: navbarKeys[1],
+                          color: CustomColor.bgLight1,
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                              left: 80.0,
+                              right: 80.0,
+                            ),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                // title
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "My",
+                                      style: PTypography.displayText.copyWith(
+                                        color: PrimaryColor.black,
+                                      ),
+                                    ),
+                                    const SizedBox(width: 10),
+                                    Text(
+                                      "Skills",
+                                      style: PTypography.displayText.copyWith(
+                                          color: PrimaryColor.black,
+                                          fontWeight: FontWeight.w900),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 50),
+                                const SkillsDesktop()
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      // PROJECTS
+                      ProjectsSection(
+                        key: navbarKeys[2],
+                      ),
+                      AboutMe(
+                        key: navbarKeys[3],
+                      ),
+                      MobileProjects(
+                        key: navbarKeys[4],
+                      ),
+                      // CONTACT
+                      ContactSection(
+                        key: navbarKeys[5],
+                      ),
+                      const SizedBox(height: 30),
+                      // FOOTER
+                      const Footer(),
+                    ],
+                  ),
+                )
+              ] else ...[
                 HeaderMobile(
                   onLogoTap: () {},
                   onMenuTap: () {
                     scaffoldKey.currentState?.openEndDrawer();
                   },
                 ),
-              SizedBox(key: navbarKeys.first),
-              if (constraints.maxWidth >= kMinDesktopWidth)
-                const MainDesktop()
-              else
+                SizedBox(key: navbarKeys.first),
                 const MainMobile(),
-
-              // SKILLS
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 80.0,
-                  right: 80.0,
-                  top: 60.0,
-                ),
-                child: Container(
-                  key: navbarKeys[1],
-                  color: CustomColor.bgLight1,
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                      left: 80.0,
-                      right: 80.0,
-                    ),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        // title
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "My",
-                              style: PTypography.displayText.copyWith(
-                                color: PrimaryColor.black,
-                              ),
-                            ),
-                            const SizedBox(width: 10),
-                            Text(
-                              "Skills",
-                              style: PTypography.displayText.copyWith(
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 80.0,
+                    right: 80.0,
+                    top: 60.0,
+                  ),
+                  child: Container(
+                    key: navbarKeys[1],
+                    color: CustomColor.bgLight1,
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        left: 80.0,
+                        right: 80.0,
+                      ),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          // title
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "My",
+                                style: PTypography.displayText.copyWith(
                                   color: PrimaryColor.black,
-                                  fontWeight: FontWeight.w900),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 50),
+                                ),
+                              ),
+                              const SizedBox(width: 10),
+                              Text(
+                                "Skills",
+                                style: PTypography.displayText.copyWith(
+                                    color: PrimaryColor.black,
+                                    fontWeight: FontWeight.w900),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 50),
 
-                        // platforms and skills
-                        if (constraints.maxWidth >= kMedDesktopWidth)
-                          const SkillsDesktop()
-                        else
+                          // platforms and skills
                           const SkillsMobile(),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
-              ),
-              // PROJECTS
-              ProjectsSection(
-                key: navbarKeys[2],
-              ),
-              const AboutMe(),
-              const MobileProjects(),
-              // CONTACT
-              ContactSection(
-                key: navbarKeys[3],
-              ),
-              const SizedBox(height: 30),
-
-              // FOOTER
-              const Footer(),
+              ]
             ],
           ),
         ),
@@ -139,17 +189,12 @@ class _HomeState extends State<Home> {
   }
 
   void scrollToSection(int navIndex) {
-    if (navIndex == 4) {
-      // open a blog page
-      js.context.callMethod('open', [SnsLinks.blog]);
-      return;
-    }
-
     final key = navbarKeys[navIndex];
     Scrollable.ensureVisible(
       key.currentContext!,
       duration: const Duration(milliseconds: 500),
       curve: Curves.easeInOut,
+      alignment: 0.5,
     );
   }
 }

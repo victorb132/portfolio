@@ -18,7 +18,7 @@ class HeaderDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 140.0,
+      height: 110.0,
       margin: const EdgeInsets.symmetric(
         vertical: 24.0,
         horizontal: 80.0,
@@ -30,7 +30,9 @@ class HeaderDesktop extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SiteLogo(
-            onTap: () {},
+            onTap: () {
+              onNavMenuTap(0);
+            },
           ),
           Row(
             children: [

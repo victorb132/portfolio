@@ -5,13 +5,16 @@ import 'package:portfolio_victor/src/constants/typography.dart';
 import '../constants/colors.dart';
 
 class MobileProjects extends StatelessWidget {
-  const MobileProjects({super.key});
+  Key? keyMobile;
+
+  MobileProjects({super.key});
 
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
 
     return Container(
+      key: keyMobile,
       color: PrimaryColor.black,
       width: screenWidth,
       padding: const EdgeInsets.fromLTRB(25, 60, 25, 0),

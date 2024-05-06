@@ -3,11 +3,14 @@ import 'package:portfolio_victor/src/constants/colors.dart';
 import 'package:portfolio_victor/src/constants/typography.dart';
 
 class AboutMe extends StatelessWidget {
-  const AboutMe({super.key});
+  Key? keyAbout;
+
+  AboutMe({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: keyAbout,
       width: MediaQuery.of(context).size.width,
       padding: const EdgeInsets.fromLTRB(25, 60, 25, 60),
       child: Row(
